@@ -2,7 +2,7 @@ from typing import Any
 import csv
 from django.core.management.base import BaseCommand
 
-from ...models import get_db
+from importer.models import get_db
 
 class Command(BaseCommand):
     help = 'This command import data from CSV or JSon files'
