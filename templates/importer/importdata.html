@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Importer
+{% endblock page_title %}
+
+{% block page_content %}
+<div class="container">
+    <h3 class="text-center">Import Data to Collection</h3>
+    <form action="{% url "importdata" %}" method="post" enctype="multipart/form-data" style= "max-width:600px; margin:auto; padding-top: 5opx;">
+        {% csrf_token %}
+        <div class="from-group">
+            <label for="file_path">Upload CSV File</label>
+            <input type="file" name="file_path" class="from-control">
+        </div>
+        <div class="from-group">
+            <label for="model_name">Select Collection</label>
+            <select name="model_name" class="from-control">
+            <option value="" disabled selected>Select</option>
+            <option value="">Demo Model</option>
+            </select>
+        </div>
+        <input type="submit" value="Import Data" class="btn btn-primary">
+    </form>
+</div>
+{% endblock page_content %}

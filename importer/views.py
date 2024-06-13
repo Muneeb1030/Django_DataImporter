@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def importdata(request):
+    return render(request, 'importer/importdata.html')
