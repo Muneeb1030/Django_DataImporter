@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'importer',
+    'upload',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,6 @@ import sentry_sdk
 sentry_sdk.init(
     dsn="https://8e801cf054f25fdee911d66b94d65a11@o4507429132369920.ingest.us.sentry.io/4507429135187968",
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
