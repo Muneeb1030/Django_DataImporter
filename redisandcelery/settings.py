@@ -122,3 +122,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://8e801cf054f25fdee911d66b94d65a11@o4507429132369920.ingest.us.sentry.io/4507429135187968",
+)

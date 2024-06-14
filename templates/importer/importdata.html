@@ -17,7 +17,10 @@ Importer
             <label for="model_name">Select Collection</label>
             <select name="model_name" class="from-control">
             <option value="" disabled selected>Select</option>
-            <option value="">Demo Model</option>
+            {% for collect in collections %}
+            <option value="">{{ collect }}</option>
+            {% endfor %}
+            
             </select>
         </div>
         <input type="submit" value="Import Data" class="btn btn-primary">
