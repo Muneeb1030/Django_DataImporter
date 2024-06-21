@@ -1,5 +1,4 @@
 from redisandcelery.celery import app
-from celery import shared_task
 import time
 from django.core.management import call_command
 
