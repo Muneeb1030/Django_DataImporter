@@ -12,8 +12,8 @@ This Django project features a robust data importer tool designed to handle larg
 ## Installation
 - Clone the repository:
 ```bash
-git clone https://github.com/your_username/your_project.git
-cd your_project
+https://github.com/Muneeb1030/Django_DataImporter.git
+cd Django_DataImporter
 ```
 Install dependencies:
 ```bash
