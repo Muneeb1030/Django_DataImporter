@@ -5,17 +5,17 @@ Importer
 {% endblock page_title %}
 
 {% block page_content %}
-<div class="container">
-    <h3 class="text-center">Import Data to Collection</h3>
-    <form action="{% url "importdata" %}" method="post" enctype="multipart/form-data" style= "max-width:600px; margin:auto; padding-top: 5opx;">
+<div >
+    <h3 >Import Data to Collection</h3>
+    <form action="{% url "importdata" %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="from-group">
+        <div >
             <label for="file_path">Upload CSV File</label>
-            <input type="file" name="file_path" class="from-control">
+            <input type="file" name="file_path" >
         </div>
-        <div class="from-group">
+        <div>
             <label for="model_name">Select Collection</label>
-            <select name="model_name" class="from-control">
+            <select name="model_name" >
             <option value="" disabled selected>Select</option>
             {% for collect in collections %}
             <option value="{{ collect }}">{{ collect }}</option>
@@ -23,7 +23,7 @@ Importer
             
             </select>
         </div>
-        <input type="submit" value="Import Data" class="btn btn-primary">
+        <input type="submit" value="Import Data" >
     </form>
 </div>
 {% endblock page_content %}
